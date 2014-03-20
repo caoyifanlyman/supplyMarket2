@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping>
+	<class table="InOrder" name="cn.edu.fudan.ss09.pm.entity.InOrder">
+		<id column="inOrderId" name="inOrderId" type="java.lang.Integer">
+			<generator class="identity" />
+		</id>
+		<property column="customerId" name="customerId" type="java.lang.Integer" />
+		<property column="inOrderDate" name="inOrderDate" type="java.sql.Date" />
+		<property column="inTotalPrice" name="inTotalPrice" type="java.lang.Float" />
+		<property column="inDiscountRate" name="inDiscountRate" type="java.lang.Float" />
+		<property column="inDiscountedPrice" name="inDiscountedPrice" type="java.lang.Float" />
+	</class>
+</hibernate-mapping>  
+<!-- create table InOrder
+(
+   inOrderId            char(8) not null,
+   customerId           char(8) not null,
+   inOrderDate          date not null,
+   inTotalPrice         float(8,2) not null,
+   inDiscountRate       numeric(3,2) not null,
+   inDiscountedPrice    float(8,2) not null,
+   primary key (inOrderId)
+); -->

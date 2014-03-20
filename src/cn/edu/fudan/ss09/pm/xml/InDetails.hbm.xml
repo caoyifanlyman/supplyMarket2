@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class table="InDetails" name="cn.edu.fudan.ss09.pm.entity.InDetails">
+		<id column="inDetailsId" name="inDetailsId" type="java.lang.Integer">
+			<generator class="identity" />
+		</id>
+		<property column="ISBN" name="ISBN" type="java.lang.String" />
+		<property column="edition" name="edition" type="java.lang.Integer" />
+		<property column="impression" name="impression" type="java.lang.Integer" />
+		<property column="inOrderId" name="inOrderId" type="java.lang.Integer" />
+		<property column="warehouseId" name="warehouseId" type="java.lang.Integer" />
+		<property column="inCount" name="inCount" type="java.lang.Integer" />
+		<property column="inItemPrice" name="inItemPrice" type="java.lang.Float" />
+		
+	</class>
+</hibernate-mapping>  
+<!-- create table InDetails
+(
+   inDetailsId          char(8) not null,
+   ISBN                 numeric(13,0),
+   edition              int,
+   impression           int,
+   inOrderId            char(8) not null,
+   warehouseId          char(8),
+   inCount              int not null,
+   inItemPrice          float(8,2) not null,
+   primary key (inDetailsId)
+); -->

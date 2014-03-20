@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping>
+	<class table="Inventory" name="cn.edu.fudan.ss09.pm.entity.Inventory">
+		<id column="inventoryId" name="inventoryId" type="java.lang.Integer">
+			<generator class="identity" />
+		</id>
+		<property column="ISBN" name="ISBN" type="java.lang.String" />
+		<property column="edition" name="edition" type="java.lang.Integer" />
+		<property column="impression" name="impression" type="java.lang.Integer" />
+		<property column="warehouseId" name="warehouseId" type="java.lang.Integer" />
+		<property column="currentCount" name="currentCount" type="java.lang.Integer" />
+		<property column="countDate" name="countDate" type="java.sql.Date" />
+	</class>
+</hibernate-mapping>  
+<!-- create table Inventory
+(
+   inventoryId          char(8) not null,
+   ISBN                 numeric(13,0),
+   edition              int,
+   impression           int,
+   warehouseId          char(8),
+   currentCount         int not null,
+   countDate            date not null,
+   primary key (inventoryId)
+); -->

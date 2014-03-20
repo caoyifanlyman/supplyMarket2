@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping>
+	<class table="Product" name="cn.edu.fudan.ss09.pm.entity.Product">
+		<composite-id>
+            <key-property name="ISBN" column="ISBN" type="java.lang.String"/>
+            <key-property name="edition" column="edition" type="java.lang.Integer"/>
+            <key-property name="impression" column="impression" type="java.lang.Integer"/>
+        </composite-id>
+		<property column="bookname" name="bookname" type="java.lang.String" />
+		<property column="author" name="author" type="java.lang.String" />
+		<property column="publishDate" name="publishDate" type="java.sql.Date" />
+		<property column="impressionDate" name="impressionDate" type="java.sql.Date" />
+		<property column="press" name="press" type="java.lang.String" />
+	</class>
+</hibernate-mapping>  
+<!-- create table Product
+(
+   ISBN                 numeric(13,0) not null,
+   edition              int not null,
+   impression           int not null,
+   bookname             varchar(100) not null,
+   author               varchar(30) not null,
+   publishDate          date not null,
+   impressionDate       date not null,
+   press                varchar(100),
+   primary key (ISBN, edition, impression)
+); -->

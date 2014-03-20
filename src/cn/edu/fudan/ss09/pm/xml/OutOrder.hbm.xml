@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping>
+	<class table="OutOrder" name="cn.edu.fudan.ss09.pm.entity.OutOrder">
+		<id column="outOrderId" name="outOrderId" type="java.lang.Integer">
+			<generator class="identity" />
+		</id>
+		<property column="customerId" name="customerId" type="java.lang.Integer" />
+		<property column="outOrderDate" name="outOrderDate" type="java.sql.Date" />
+		<property column="outTotalPrice" name="outTotalPrice" type="java.lang.Float" />
+		<property column="outDiscountRate" name="outDiscountRate" type="java.lang.Float" />
+		<property column="outDiscountedPrice" name="outDiscountedPrice" type="java.lang.Float" />
+	</class>
+</hibernate-mapping>  
+<!-- create table OutOrder
+(
+   outOrderId           char(8) not null,
+   customerId           char(8) not null,
+   outOrderDate         date not null,
+   outTotalPrice        float(8,2) not null,
+   outDiscountRate      numeric(3,2) not null,
+   outDiscountedPrice   float(8,2) not null,
+   primary key (outOrderId)
+); -->

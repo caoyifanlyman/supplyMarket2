@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping>
+	<class table="OutDetails" name="cn.edu.fudan.ss09.pm.entity.OutDetails">
+		<id column="outDetailsId" name="outDetailsId" type="java.lang.Integer">
+			<generator class="identity" />
+		</id>
+		<property column="warehouseId" name="warehouseId" type="java.lang.Integer" />
+		<property column="ISBN" name="ISBN" type="java.lang.String" />
+		<property column="edition" name="edition" type="java.lang.Integer" />
+		<property column="impression" name="impression" type="java.lang.Integer" />
+		<property column="outOrderId" name="outOrderId" type="java.lang.Integer" />
+		<property column="outCount" name="outCount" type="java.lang.Integer" />
+		<property column="outItemPrice" name="outItemPrice" type="java.lang.Float" />
+	</class>
+</hibernate-mapping>  
+<!-- create table OutDetails
+(
+   outDetailsId         char(8) not null,
+   warehouseId          char(8),
+   ISBN                 numeric(13,0),
+   edition              int,
+   impression           int,
+   outOrderId           char(8) not null,
+   outCount             int not null,
+   outItemPrice         float(8,2) not null,
+   primary key (outDetailsId)
+); -->

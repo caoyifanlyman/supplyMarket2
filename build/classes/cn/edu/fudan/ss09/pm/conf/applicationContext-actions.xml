@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:util="http://www.springframework.org/schema/util"
+ xmlns:aop="http://www.springframework.org/schema/aop"
+ xmlns:tx="http://www.springframework.org/schema/tx"
+ xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd       
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+	
+	<bean id="employeeAction" class="cn.edu.fudan.ss09.pm.action.EmployeeAction" scope="prototype">
+		<property name="service" ref="employeeService"></property>
+	</bean>
+	<bean id="customerAction" class="cn.edu.fudan.ss09.pm.action.CustomerAction" scope="prototype">
+		<property name="service" ref="customerService"></property>
+	</bean>
+	
+	<bean id="inventoryAction" class="cn.edu.fudan.ss09.pm.action.InventoryAction" scope="prototype">
+		<property name="service" ref="inventoryService"></property>
+	</bean>
+	
+	<bean id="productAction" class="cn.edu.fudan.ss09.pm.action.ProductAction" scope="prototype">
+		<property name="service" ref="productService"></property>
+	</bean>
+	
+	<bean id="warehouseAction" class="cn.edu.fudan.ss09.pm.action.WarehouseAction" scope="prototype">
+		<property name="service" ref="warehouseService"></property>
+	</bean>
+	
+	<bean id="userAction" class="cn.edu.fudan.ss09.pm.action.UserAction" scope="prototype">
+		<property name="service" ref="userService"></property>
+	</bean>
+	
+	<bean id="sessionAction" class="cn.edu.fudan.ss09.pm.action.SessionAction" scope="prototype">
+	
+	</bean>
+	
+	<bean id="inOrderAction" class="cn.edu.fudan.ss09.pm.action.InOrderAction" scope="prototype">
+		<property name="service" ref="inOrderService"></property>
+	</bean>
+	<bean id="outOrderAction" class="cn.edu.fudan.ss09.pm.action.OutOrderAction" scope="prototype">
+		<property name="service" ref="outOrderService"></property>
+	</bean>
+</beans>

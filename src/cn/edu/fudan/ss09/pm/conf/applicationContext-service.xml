@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:util="http://www.springframework.org/schema/util"
+ xmlns:aop="http://www.springframework.org/schema/aop"
+ xmlns:tx="http://www.springframework.org/schema/tx"
+ xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd       
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+	<bean id="employeeService" class="cn.edu.fudan.ss09.pm.service.EmployeeService" scope="prototype">
+		<property name="dao" ref="daoImpl"></property>
+	</bean>
+	
+	<bean id="customerService" class="cn.edu.fudan.ss09.pm.service.CustomerService" scope="prototype">
+		<property name="dao" ref="daoImpl"></property>
+	</bean>
+	
+	<bean id="inventoryService" class="cn.edu.fudan.ss09.pm.service.InventoryService" scope="prototype">
+		<property name="dao" ref="daoImpl"></property>
+	</bean>
+	
+	<bean id="inOrderService" class="cn.edu.fudan.ss09.pm.service.InOrderService" scope="prototype">
+		<property name="dao" ref="daoImpl"></property>
+	</bean>
+	
+	<bean id="outOrderService" class="cn.edu.fudan.ss09.pm.service.OutOrderService" scope="prototype">
+		<property name="dao" ref="daoImpl"></property>
+	</bean>
+	
+	<bean id="userService" class="cn.edu.fudan.ss09.pm.service.UserService" scope="prototype">
+		<property name="dao" ref="daoImpl"></property>
+	</bean>
+	<bean id="warehouseService" class="cn.edu.fudan.ss09.pm.service.WarehouseService" scope="prototype">
+		<property name="dao" ref="daoImpl"></property>
+	</bean>
+	<bean id="productService" class="cn.edu.fudan.ss09.pm.service.ProductService" scope="prototype">
+		<property name="dao" ref="daoImpl"></property>
+	</bean>
+</beans>

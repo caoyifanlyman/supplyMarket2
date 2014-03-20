@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="GBK" />
+	<constant name="struts.devMode" value="true" />
+
+	<package name="employee" extends="json-default">
+		<action name="getAllEmployees" class="employeeAction" method="getAllEmployees">
+			<result name="SUCCEED" type="json">
+				<param name="includeProperties">root.*</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="removeEmployee" class="employeeAction" method="removeEmployee">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="updateEmployee" class="employeeAction" method="updateEmployee">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="addEmployee" class="employeeAction" method="addEmployee">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="customer" extends="json-default">
+		<action name="getAllCustomers" class="customerAction" method="getAllCustomers">
+			<result name="SUCCEED" type="json">
+				<param name="includeProperties">root.*</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="removeCustomer" class="customerAction" method="removeCustomer">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="updateCustomer" class="customerAction" method="updateCustomer">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="addCustomer" class="customerAction" method="addCustomer">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="inventory" extends="json-default">
+		<action name="getAllInventories" class="inventoryAction"
+			method="getAllInventories">
+			<result name="SUCCEED" type="json">
+				<param name="includeProperties">root.*</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="removeInventory" class="inventoryAction" method="removeInventory">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="updateInventory" class="inventoryAction" method="updateInventory">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="addInventory" class="inventoryAction" method="addInventory">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="product" extends="json-default">
+		<action name="getAllProduct" class="productAction" method="getAllProduct">
+			<result name="SUCCEED" type="json">
+				<param name="includeProperties">root.*</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="warehouse" extends="json-default">
+		<action name="getAllWarehouse" class="warehouseAction" method="getAllWarehouse">
+			<result name="SUCCEED" type="json">
+				<param name="includeProperties">root.*</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="userInfo" extends="json-default">
+		<action name="getAllUsers" class="userAction" method="getAllUsers">
+			<result name="SUCCEED" type="json">
+				<param name="includeProperties">root.*</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="removeUser" class="userAction" method="removeUser">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="addUser" class="userAction" method="addUser">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="login" class="userAction" method="login">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="changePwd" class="userAction" method="changePwd">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="checkLogin" class="sessionAction" method="checkLogin">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="logout" class="sessionAction" method="logout">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="inOrder" extends="json-default">
+		<action name="getAllInOrders" class="inOrderAction" method="getAllOrders">
+			<result name="SUCCEED" type="json">
+				<param name="includeProperties">root.*</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="removeInOrder" class="inOrderAction" method="removeOrder">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="addInOrder" class="inOrderAction" method="addOrder">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="getAllInDetails" class="inOrderAction" method="getDetails">
+			<result name="SUCCEED" type="json">
+				<param name="includeProperties">root.*</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="addInDetails" class="inOrderAction" method="addDetails">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="removeInDetails" class="inOrderAction" method="removeDetails">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+		<action name="updateInDetails" class="inOrderAction" method="updateDetails">
+			<result name="SUCCEED" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+			<result name="FAIL" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">result</param>
+			</result>
+		</action>
+	</package>
+
+</struts>

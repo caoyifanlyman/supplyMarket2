@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping>
+	<class table="Warehouse" name="cn.edu.fudan.ss09.pm.entity.Warehouse">
+		<id column="warehouseId" name="warehouseId" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property column="warehouseName" name="warehouseName" type="java.lang.String" />
+		<property column="warehouseLocation" name="warehouseLocation" type="java.lang.String" />
+		<property column="warehouseStatus" name="warehouseStatus" type="java.lang.Integer" />		
+	</class>
+</hibernate-mapping>  
+<!--   create table Warehouse
+(
+   warehouseId          char(8) not null,
+   warehouseName        varchar(20) not null,
+   warehouseLocation    varchar(100) not null,
+   warehouseStatus      int not null,
+   primary key (warehouseId)
+);
+    -->

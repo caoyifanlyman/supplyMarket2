@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+  "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://10.131.228.151:3306/supplymarket</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.connection.autocommit">true</property>
+		
+		<mapping resource="cn/edu/fudan/ss09/pm/xml/Customer.hbm.xml"/>
+		<mapping resource="cn/edu/fudan/ss09/pm/xml/Employee.hbm.xml"/>
+		<mapping resource="cn/edu/fudan/ss09/pm/xml/InDetails.hbm.xml"/>
+		<mapping resource="cn/edu/fudan/ss09/pm/xml/InOrder.hbm.xml"/>
+		<mapping resource="cn/edu/fudan/ss09/pm/xml/Inventory.hbm.xml"/>
+		<mapping resource="cn/edu/fudan/ss09/pm/xml/OutDetails.hbm.xml"/>
+		<mapping resource="cn/edu/fudan/ss09/pm/xml/OutOrder.hbm.xml"/>
+		<mapping resource="cn/edu/fudan/ss09/pm/xml/Product.hbm.xml"/>
+		<mapping resource="cn/edu/fudan/ss09/pm/xml/UserInfo.hbm.xml"/>
+		<mapping resource="cn/edu/fudan/ss09/pm/xml/Warehouse.hbm.xml"/>
+		
+	</session-factory>
+</hibernate-configuration>  
